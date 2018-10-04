@@ -1,25 +1,33 @@
+// Se agregan los marcadores al grupo con las coordenadas y el modal
+
 function addMarkerToGroup(group, coords, html) {
   addingMarkers();
+
   var marker = new H.map.Marker(coords);
-  // add custom data to the marker
+
   marker.setData(html);
   group.addObject(marker);
-  markers.push(marker);
+  console.log(marker);
+
+  console.log(Object.entries(group));
 }
 
 
+// Se agrega el modal en el mapa y se crea el grupo en el mapa
 function addInfoBubble(map) {
   addingMarkers();
 
-  markers = [];
+
 
   var group = new H.map.Group();
+
   console.log(Object.entries(placesList));
   coords = {
     lng: Object.entries(placesList)[1][1],
     lat: Object.entries(placesList)[0][1],
   };
   console.log(coords.lat);
+
   map.addObject(group);
 
   // add 'tap' event listener, that opens info bubble, to the group
@@ -41,5 +49,7 @@ function addInfoBubble(map) {
       lat: Object.entries(placesList)[0][1],
     },
     "<h4>hola</h4>");
+  console.log(group);
+
 
 };

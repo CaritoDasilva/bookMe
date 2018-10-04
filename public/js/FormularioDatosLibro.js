@@ -1,7 +1,7 @@
 firebase.initializeApp({
     apiKey: "AIzaSyC7nuA5-QZDkhNnH6FBxoepllvmtkqDuMo",
     authDomain: "bookme-78399.firebaseapp.com",
-    projectId: "bookme-78399"
+
 });
 //Inicializa una instancia de Cloud Firestore
 var db = firebase.firestore();
@@ -20,7 +20,7 @@ function donateBook() {
             Code: code
 
         })
-        .then(function(bookRef) {
+        .then(function (bookRef) {
             console.log("libro correctamente añadido");
 
             document.getElementById('bookTitleBox').value = '';
@@ -28,7 +28,7 @@ function donateBook() {
             document.getElementById('place').value = '';
             document.getElementById('code').value = '';
         })
-        .catch(function(error) {
+        .catch(function (error) {
 
         });
 }
