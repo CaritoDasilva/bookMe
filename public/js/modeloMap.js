@@ -48,7 +48,7 @@ function addInfoBubble(map) {
       lng: Object.entries(placesList)[1][1],
       lat: Object.entries(placesList)[0][1],
     },
-    "<h4>hola</h4>");
+    "<h4>Vienes?</h4>");
   console.log(group);
 
 
